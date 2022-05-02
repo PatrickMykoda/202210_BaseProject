@@ -63,10 +63,12 @@ describe('VehiculoListComponent', () => {
     debug = fixture.debugElement;
   });
 
+  // El test comprueba si funciona la creación del componente
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
+  // El test comprueba si la tabla se crea con el numero correcto de filas (En este caso 4 filas => el encabezado más los 3 vehiculos)
   it('should create table correctly', () => {
     let list = fixture.debugElement.queryAll(By.css('tr'));
     expect(list.length).toBe(4);
